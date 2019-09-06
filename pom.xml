@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.rao.study.trace</groupId>
+    <groupId>com.rao.study</groupId>
     <artifactId>study-trace</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -12,6 +12,7 @@
         <module>study-trace-api</module>
         <module>study-trace-core</module>
         <module>study-trace-web</module>
+        <module>study-trace-lib</module>
     </modules>
 
     <properties>
@@ -39,14 +40,26 @@
         <dependencies>
 
             <dependency>
-                <groupId>com.rao.study.trace</groupId>
+                <groupId>com.rao.study</groupId>
                 <artifactId>study-trace-api</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 
             <dependency>
-                <groupId>com.rao.study.trace</groupId>
+                <groupId>com.rao.study</groupId>
+                <artifactId>study-trace-lib</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rao.study</groupId>
                 <artifactId>study-trace-core</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rao.study</groupId>
+                <artifactId>study-trace-dubbo-api</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
 
@@ -81,6 +94,13 @@
                 <version>1.1.10</version>
             </dependency>
 
+            <!-- dubbo依赖 -->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>0.1.1</version>
+            </dependency>
+
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -90,4 +110,24 @@
         </dependencies>
     </dependencyManagement>
 
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>cobertura-maven-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

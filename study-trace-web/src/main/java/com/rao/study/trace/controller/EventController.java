@@ -2,6 +2,7 @@ package com.rao.study.trace.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.rao.study.trace.annotation.EnableTrace;
 import com.rao.study.trace.constants.Urls;
 import com.rao.study.trace.entity.Event;
 import com.rao.study.trace.service.IEventService;
@@ -27,11 +28,12 @@ public class EventController {
     private IEventService iEventService;
 
     @GetMapping(value = Urls.V1.Event.SAVE)
+    @EnableTrace
     public void save(){
         Event event = new Event();
         event.setName("sdfsdf");
         event.setTime(LocalDateTime.now());
-        iEventService.save(event);
+        iEventService.saveEvent(event);
     }
 
     @GetMapping(value = Urls.V1.Event.LIST)
