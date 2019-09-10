@@ -1,5 +1,6 @@
 package com.rao.study.trace.service;
 
+import com.rao.study.trace.dubbo.dto.EventDto;
 import com.rao.study.trace.entity.Event;
 import com.baomidou.mybatisplus.extension.service.IService;
 
@@ -13,6 +14,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IEventService extends IService<Event> {
 
-    void saveEvent(Event event);
+    void updateEvent(EventDto eventDto);
 
 }

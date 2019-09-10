@@ -8,6 +8,7 @@ public interface Urls {
             String EVENT = V1 + "/event";
             String LIST = EVENT + "/list";
             String SAVE = EVENT + "/save";
+            String UPDATE = EVENT + "/update";
         }
     }
 }
