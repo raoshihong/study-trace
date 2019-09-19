@@ -32,6 +32,11 @@ public class Event implements Serializable {
     private Long id;
 
     /**
+     * 链路标识
+     */
+    private String spanId;
+
+    /**
      * 事件名称
      */
     private String name;

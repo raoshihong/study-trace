@@ -7,6 +7,11 @@ public class EventDto implements Serializable {
     private Long id;
 
     /**
+     * 链路标识
+     */
+    private String spanId;
+
+    /**
      * 事件名称
      */
     private String name;
@@ -27,6 +32,14 @@ public class EventDto implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getSpanId() {
+        return spanId;
+    }
+
+    public void setSpanId(String spanId) {
+        this.spanId = spanId;
     }
 
     public String getName() {

@@ -1,0 +1,36 @@
+[
+  {
+    "tableName":"t_user",
+    "tableNameDesc":"用户",
+    "primaryKeyName":"id",
+    "parentTableName":"t_user",
+    "foreignKeyName":"id",
+    "properties":[
+      {"proEnName":"name","proCnName":"姓名"},
+      {"proEnName":"mobile","proCnName":"手机号"}
+    ]
+  },
+  {
+    "tableName":"t_channel",
+    "tableNameDesc":"渠道",
+    "primaryKeyName":"id",
+    "parentTableName":"t_channel",
+    "foreignKeyName":"id",
+    "properties":[
+      {"proEnName":"name","proCnName":"渠道名称"},
+      {"proEnName":"state","proCnName":"状态"}
+    ]
+  },{
+    "tableName":"t_agent",
+    "tableNameDesc":"客户经理",
+    "primaryKeyName":"id",
+    "parentTableName":"t_channel",
+    "foreignKeyName":"channel_id",
+    "properties":[
+      {"proEnName":"channel_id","proCnName":"渠道id"},
+      {"proEnName":"name","proCnName":"客户经理名称"},
+      {"proEnName":"mobile","proCnName":"客户经理手机号"},
+      {"proEnName":"state","proCnName":"状态"}
+    ]
+  }
+]

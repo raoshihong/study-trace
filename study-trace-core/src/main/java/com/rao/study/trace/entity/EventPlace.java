@@ -31,9 +31,9 @@ public class EventPlace implements Serializable {
     private Long id;
 
     /**
-     * 事件id
+     * 链路标识
      */
-    private Long eventId;
+    private String spanId;
 
     /**
      * 操作页面代码

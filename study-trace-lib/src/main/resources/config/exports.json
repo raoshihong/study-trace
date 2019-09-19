@@ -1,0 +1,19 @@
+[
+  {
+    "tableName":"t_user",
+    "properties":[
+      "name"
+    ]
+  },
+  {
+    "tableName":"t_channel",
+    "properties":[
+      "name"
+    ]
+  },{
+  "tableName":"t_agent",
+  "properties":[
+    "name"
+  ]
+}
+]

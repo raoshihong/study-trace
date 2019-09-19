@@ -31,19 +31,24 @@ public class EventContent implements Serializable {
     private Long id;
 
     /**
-     * 事件id
+     * 链路标识
      */
-    private Long eventId;
+    private String spanId;
 
     /**
-     * 操作数据唯一标识id
+     * 操作主表数据唯一标识id
      */
     private Long dataId;
 
     /**
-     * 操作数据标识名称
+     * 操作主表数据标识名称
      */
     private String dataName;
+
+    /**
+     * 数据操作类型update,insert,delete
+     */
+    private String dataActionType;
 
     /**
      * 修改字段英文名
@@ -65,5 +70,23 @@ public class EventContent implements Serializable {
      */
     private String neValue;
 
+    /**
+     * 操作表名
+     */
+    private String tableName;
 
+    /**
+     * 表名描述
+     */
+    private String tableNameDesc;
+
+    /**
+     * 操作记录id
+     */
+    private Long recordId;
+
+    private String dataTableName;
+
+    private String beforeBody;
+    private String afterBody;
 }

@@ -1,1 +1,1 @@
-gtrace=com.rao.study.trace.filter.GlobalTraceFilter
+gtrace=com.rao.study.trace.lib.filter.GlobalTraceFilter

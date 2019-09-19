@@ -22,4 +22,9 @@ public class EventContentFacedImpl implements IEventContentFaced {
         BeanUtils.copyProperties(eventContentDto,eventContent);
         iEventContentService.save(eventContent);
     }
+
+    @Override
+    public void processContent(EventContentDto eventContentDto) {
+
+    }
 }

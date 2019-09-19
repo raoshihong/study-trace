@@ -6,9 +6,9 @@ public class EventContentDto implements Serializable {
     private Long id;
 
     /**
-     * 事件id
+     * 链路标识
      */
-    private Long eventId;
+    private String spanId;
 
     /**
      * 操作数据唯一标识id
@@ -19,6 +19,11 @@ public class EventContentDto implements Serializable {
      * 操作数据标识名称
      */
     private String dataName;
+
+    /**
+     * 数据操作类型update,insert,delete
+     */
+    private String dataActionType;
 
     /**
      * 修改字段英文名
@@ -40,6 +45,18 @@ public class EventContentDto implements Serializable {
      */
     private String neValue;
 
+
+    private String tableName;
+
+    private String tableNameDesc;
+
+    private Long recordId;
+
+    private String dataTableName;
+
+    private String beforeBody;
+    private String afterBody;
+
     public Long getId() {
         return id;
     }
@@ -48,12 +65,12 @@ public class EventContentDto implements Serializable {
         this.id = id;
     }
 
-    public Long getEventId() {
-        return eventId;
+    public String getSpanId() {
+        return spanId;
     }
 
-    public void setEventId(Long eventId) {
-        this.eventId = eventId;
+    public void setSpanId(String spanId) {
+        this.spanId = spanId;
     }
 
     public Long getDataId() {
@@ -102,5 +119,61 @@ public class EventContentDto implements Serializable {
 
     public void setNeValue(String neValue) {
         this.neValue = neValue;
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
+    }
+
+    public Long getRecordId() {
+        return recordId;
+    }
+
+    public void setRecordId(Long recordId) {
+        this.recordId = recordId;
+    }
+
+    public String getTableNameDesc() {
+        return tableNameDesc;
+    }
+
+    public void setTableNameDesc(String tableNameDesc) {
+        this.tableNameDesc = tableNameDesc;
+    }
+
+    public String getDataActionType() {
+        return dataActionType;
+    }
+
+    public void setDataActionType(String dataActionType) {
+        this.dataActionType = dataActionType;
+    }
+
+    public String getDataTableName() {
+        return dataTableName;
+    }
+
+    public void setDataTableName(String dataTableName) {
+        this.dataTableName = dataTableName;
+    }
+
+    public String getBeforeBody() {
+        return beforeBody;
+    }
+
+    public void setBeforeBody(String beforeBody) {
+        this.beforeBody = beforeBody;
+    }
+
+    public String getAfterBody() {
+        return afterBody;
+    }
+
+    public void setAfterBody(String afterBody) {
+        this.afterBody = afterBody;
     }
 }

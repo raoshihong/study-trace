@@ -86,7 +86,7 @@ public class MybatisPlusGenerator {
 		focList.add(new FileOutConfig("/templates/mapper.xml.ftl") {
 			@Override
 			public String outputFile(TableInfo tableInfo) {
-				// todo: 过滤不要生成的字段
+				// 过滤不要生成的字段
 				// 自定义输入文件名称
 				return mapperOutputDir + tableInfo.getEntityName() + "Mapper"
 						+ StringPool.DOT_XML;

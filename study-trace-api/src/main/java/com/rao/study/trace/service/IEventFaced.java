@@ -4,6 +4,6 @@ import com.rao.study.trace.dto.EventDto;
 
 public interface IEventFaced {
 
-    Long save(EventDto eventDto);
+    void save(EventDto eventDto);
 
 }

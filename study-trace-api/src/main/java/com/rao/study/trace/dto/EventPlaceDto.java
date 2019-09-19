@@ -6,9 +6,9 @@ public class EventPlaceDto implements Serializable {
     private Long id;
 
     /**
-     * 事件id
+     * 链路标识
      */
-    private Long eventId;
+    private String spanId;
 
     /**
      * 操作页面代码
@@ -43,12 +43,12 @@ public class EventPlaceDto implements Serializable {
         this.id = id;
     }
 
-    public Long getEventId() {
-        return eventId;
+    public String getSpanId() {
+        return spanId;
     }
 
-    public void setEventId(Long eventId) {
-        this.eventId = eventId;
+    public void setSpanId(String spanId) {
+        this.spanId = spanId;
     }
 
     public String getPlacePageCode() {
